@@ -7,7 +7,7 @@ const Hero = () => {
         <img src={underConstruction} alt="" />
       </div>
       <div className="text-center font-bold text-6xl ">
-        Under Construction...
+        Under Construction....
       </div>
     </>
   )
