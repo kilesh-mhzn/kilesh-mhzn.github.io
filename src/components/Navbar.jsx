@@ -12,7 +12,7 @@ const Navbar = () => {
   ]
   return (
     <>
-      <nav className="flex items-center justify-between p-10">
+      <nav className="flex items-center justify-between py-10">
         <div className='w-1/5'>
           <img src={logo} alt="Logo" />
         </div>
@@ -22,7 +22,7 @@ const Navbar = () => {
             return (
               <li 
                 key={index} 
-                className="relative font-sono cursor-pointer text-white hover:text-slate-200"
+                className="relative hidden md:block font-sono cursor-pointer text-white hover:text-slate-200"
               >
                 //&nbsp;{menu.name}
                 &nbsp;
