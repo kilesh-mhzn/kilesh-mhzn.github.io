@@ -6,21 +6,21 @@ function ThemeToggle() {
   const {isLightMode, toggleLightMode} = useContext(ThemeContext)
 
   return (
-    <div class="toggleWrapper">
+    <div className="toggleWrapper">
       <input checked={isLightMode}
-          onChange={toggleLightMode} type="checkbox" class="dn" id="dn" />
-      <label for="dn" class="toggle">
-          <span class="toggle__handler">
-              <span class="crater crater--1"></span>
-              <span class="crater crater--2"></span>
-              <span class="crater crater--3"></span>
+          onChange={toggleLightMode} type="checkbox" className="dn" id="dn" />
+      <label htmlFor="dn" className="toggle">
+          <span className="toggle__handler">
+              <span className="crater crater--1"></span>
+              <span className="crater crater--2"></span>
+              <span className="crater crater--3"></span>
           </span>
-          <span class="star star--1"></span>
-          <span class="star star--2"></span>
-          <span class="star star--3"></span>
-          <span class="star star--4"></span>
-          <span class="star star--5"></span>
-          <span class="star star--6"></span>
+          <span className="star star--1"></span>
+          <span className="star star--2"></span>
+          <span className="star star--3"></span>
+          <span className="star star--4"></span>
+          <span className="star star--5"></span>
+          <span className="star star--6"></span>
       </label>
   </div>
   );

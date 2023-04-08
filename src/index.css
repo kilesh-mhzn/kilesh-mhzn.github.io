@@ -83,3 +83,39 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+/* responsive menu */
+.navbar-active-site-wrapper {
+  animation: navbar-active 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation-fill-mode: forwards;
+  @apply fixed w-full h-screen overflow-y-hidden pl-4 rounded-xl;
+}
+
+.navbar-deactive-site-wrapper {
+  animation: navbar-deactive 0.5s;
+  animation-fill-mode: forwards;
+  @apply fixed w-full h-screen overflow-y-hidden;
+}
+
+.active-navbar-body {
+  @apply overflow-y-hidden md:overflow-y-auto;
+}
+
+@keyframes navbar-active {
+  0% {
+      @apply left-10 top-0;
+  }
+  100% {
+      @apply left-52 rotate-6 top-10 shadow-2xl;
+  }
+}
+
+@keyframes navbar-deactive {
+  0% {
+      @apply left-52 rotate-6 top-10 rounded-[30px] shadow-2xl;
+  }
+  100% {
+      @apply left-0 top-0 rounded-[0px];
+    }
+  }
