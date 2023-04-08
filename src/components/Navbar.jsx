@@ -1,5 +1,5 @@
 import React from 'react';
-import { logo } from '../assets';
+// import { logo } from '../assets';
 import Hamburger from './icons/hamburger';
 import ThemeToggle from './UI/ThemeToggle';
 
@@ -13,18 +13,13 @@ const Navbar = () => {
   ];
   return (
     <>
-      <nav className='flex items-center justify-between py-10'>
-        <div className='w-9/12 md:w-1/5'>
-          <img
-            src={logo}
-            alt='Logo'
-          />
+      <nav className='z-[-1] h-screen lg:h-auto flex flex-col lg:flex-row lg:items-center justify-between py-10 fixed lg:static bg-black lg:bg-skin-fill w-full px-10 left-0 top-0'>
+        <div className='uppercase whitespace-nowrap'>
+          Kilesh Maharjan
         </div>
 
-        <div className='md:hidden'>
-          <Hamburger />
-        </div>
-        <ul className='hidden md:flex gap-8'>
+        
+        <ul className='flex flex-col lg:flex-row gap-8'>
           {menuList.map((menu, index) => {
             return (
               <li
@@ -39,7 +34,7 @@ const Navbar = () => {
             );
           })}
         </ul>
-        <div className='hidden md:block'>
+        <div className=''>
           <ThemeToggle />
         </div>
       </nav>
