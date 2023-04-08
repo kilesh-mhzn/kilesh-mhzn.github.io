@@ -3,6 +3,24 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-text-base: #10101a;
+    --color-text-muted: #6b6b6d;
+    --color-text-inverted: #fff;
+    --color-fill: #eceff5;
+    --color-button-accent: #ca8a04;
+    --color-button-accent-hover: #324a51;
+  }
+
+  .theme-dark {
+    --color-text-base: #fff;
+    --color-text-muted: #6b6b6d;
+    --color-text-inverted: #10101a;
+    --color-fill: #10101a;
+    --color-button-accent: #ca8a04;
+    --color-button-accent-hover: #324a51;
+  }
+
   @font-face {
     font-family: 'sono';
     src: url(/fonts/sono.ttf);
@@ -13,11 +31,6 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #10101a;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
