@@ -28,7 +28,7 @@ function App() {
         <div className='bg-skin-fill text-skin-base'>
           <Navbar />
           <div
-            className={`container lg:static bg-skin-fill ${
+            className={`relative container lg:static bg-skin-fill ${
               isMenuOpen
                 ? 'navbar-active-site-wrapper'
                 : navDeactiveClass

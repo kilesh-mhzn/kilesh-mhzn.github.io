@@ -13,7 +13,7 @@ const Navbar = () => {
   ];
   return (
     <>
-      <nav className='z-[-1] h-screen lg:h-auto flex flex-col lg:flex-row lg:items-center justify-between py-10 fixed lg:static bg-black lg:bg-skin-fill w-full px-10 left-0 top-0'>
+      <nav className='h-screen lg:h-auto flex flex-col lg:flex-row lg:items-center justify-between py-10 fixed lg:static bg-black lg:bg-skin-fill w-full px-10 left-0 top-0'>
         <div className='uppercase whitespace-nowrap'>
           Kilesh Maharjan
         </div>

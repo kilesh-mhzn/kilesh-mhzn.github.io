@@ -8,7 +8,7 @@ const texts = [
 ];
 const Hero = () => {
   return (
-    <section style={{height: 'calc(100vh - 100px)'}} className="h-screen flex items-center ">
+    <section style={{height: 'calc(100vh - 88px)'}} className="h-screen flex items-center ">
       <div className="w-full flex flex-col md:flex-row items-center gap-10 md:gap-20 justify-center">
         <div>
           <img src={avatar} alt="Some random avatar" />
