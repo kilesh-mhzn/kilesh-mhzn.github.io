@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { logo } from '../assets';
 import Hamburger from './icons/hamburger';
+import ThemeToggle from './UI/ThemeToggle';
+
 const Navbar = () => {
   const menuList = [
     { name: 'home' },
@@ -18,6 +20,7 @@ const Navbar = () => {
             alt='Logo'
           />
         </div>
+
         <div className='md:hidden'>
           <Hamburger />
         </div>
@@ -26,7 +29,7 @@ const Navbar = () => {
             return (
               <li
                 key={index}
-                className='relative font-sono cursor-pointer text-white hover:text-slate-200'>
+                className='relative font-sono cursor-pointer font-semibold'>
                 //&nbsp;{menu.name}
                 &nbsp;
                 <span className='absolute text-xs -top-4 right-2'>
@@ -36,6 +39,9 @@ const Navbar = () => {
             );
           })}
         </ul>
+        <div className='hidden md:block'>
+          <ThemeToggle />
+        </div>
       </nav>
     </>
   );
