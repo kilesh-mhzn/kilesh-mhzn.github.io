@@ -1,40 +1,41 @@
-import React from 'react';
+import React from "react";
 // import { logo } from '../assets';
-import Hamburger from './icons/hamburger';
-import ThemeToggle from './UI/ThemeToggle';
+import Hamburger from "./icons/hamburger";
+import ThemeToggle from "./UI/ThemeToggle";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const menuList = [
-    { name: 'home' },
-    { name: 'expertise' },
-    { name: 'work' },
-    { name: 'experience' },
-    { name: 'contact' },
+    { name: "home" },
+    { name: "expertise" },
+    { name: "work" },
+    { name: "experience", href: "scrum-training-certificate" },
+    { name: "contact" },
   ];
   return (
     <>
-      <nav className='h-screen lg:h-auto flex flex-col lg:flex-row lg:items-center justify-between py-10 fixed lg:static bg-black lg:bg-skin-fill w-full px-10 left-0 top-0'>
-        <div className='uppercase whitespace-nowrap'>
-          Kilesh Maharjan
-        </div>
+      <nav className="h-screen lg:h-auto flex flex-col lg:flex-row lg:items-center justify-between py-10 fixed lg:static bg-black lg:bg-skin-fill w-full px-10 left-0 top-0">
+        <div className="uppercase whitespace-nowrap">Kilesh Maharjan</div>
 
-        
-        <ul className='flex flex-col lg:flex-row gap-8'>
+        <ul className="flex flex-col lg:flex-row gap-8">
           {menuList.map((menu, index) => {
             return (
               <li
                 key={index}
-                className='relative font-sono cursor-pointer font-semibold'>
-                //&nbsp;{menu.name}
-                &nbsp;
-                <span className='absolute text-xs -top-4 right-2'>
-                  {index.toString().padStart(2, '0')}
-                </span>
+                className="relative font-sono cursor-pointer font-semibold"
+              >
+                <NavLink style={{ color: "unset" }} to={menu.href}>
+                  //&nbsp;{menu.name}
+                  &nbsp;
+                  <span className="absolute text-xs -top-4 right-2">
+                    {index.toString().padStart(2, "0")}
+                  </span>
+                </NavLink>
               </li>
             );
           })}
         </ul>
-        <div className=''>
+        <div className="">
           <ThemeToggle />
         </div>
       </nav>
